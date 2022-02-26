@@ -45,7 +45,7 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("ui_left", "ui_right");
 	if direction and not is_attacking:
 		motion_velocity.x = direction * SPEED
 		$AnimatedSprite.play("Run")
@@ -59,6 +59,7 @@ func _physics_process(delta):
 			$AnimatedSprite.play("Idle") 
 	$AnimatedSprite.flip_h = is_fliped;
 	move_and_slide()
+
 
 func _on_animated_sprite_animation_finished():
 	if $AnimatedSprite.animation == "Attack":
