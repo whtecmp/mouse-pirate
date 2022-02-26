@@ -1,11 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://db42tfknm76tk"]
+[gd_scene load_steps=15 format=3 uid="uid://db42tfknm76tk"]
 
 [ext_resource type="Texture2D" uid="uid://csfoa2v8ax7o3" path="res://assets/IdlePlayerWBandana.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://cayucnhgiiasm" path="res://assets/PlayerRun_01.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cnltqwttpv86w" path="res://assets/PlayerAttack_01.png" id="2_ce6mo"]
 [ext_resource type="Texture2D" uid="uid://cxghk2qt5aoa0" path="res://assets/PlayerRun_02.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dfl2qo3sn37vh" path="res://assets/PlayerAttack_02.png" id="3_a0qg6"]
 [ext_resource type="Script" path="res://Player.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://bqyelk8q3ap11" path="res://assets/PlayerAttack_03.png" id="4_i2g18"]
 [ext_resource type="Texture2D" uid="uid://c58j0mst6y3us" path="res://assets/PlayerRun_04.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cabuyw77y3lw0" path="res://assets/PlayerAttack_04.png" id="5_i1yor"]
 [ext_resource type="Texture2D" uid="uid://c872offxw7wg8" path="res://assets/PlayerRun_03.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dtadjbu5enqvo" path="res://assets/PlayerAttack_05.png" id="6_kll6q"]
 [ext_resource type="Texture2D" uid="uid://cs6aj8ct05pg3" path="res://assets/PlayerRun_05.png" id="7_vywq6"]
 
 [sub_resource type="RectangleShape2D" id="1"]
@@ -13,6 +18,11 @@ size = Vector2(22.5716, 30.3424)
 
 [sub_resource type="SpriteFrames" id="2"]
 animations = [{
+"frames": [ExtResource( "2_ce6mo" ), ExtResource( "3_a0qg6" ), ExtResource( "4_i2g18" ), ExtResource( "5_i1yor" ), ExtResource( "6_kll6q" )],
+"loop": false,
+"name": &"Attack",
+"speed": 20.0
+}, {
 "frames": [ExtResource( "1" )],
 "loop": true,
 "name": &"Idle",
@@ -40,3 +50,5 @@ shape = SubResource( "1" )
 position = Vector2(14.6034, 18.4736)
 frames = SubResource( "2" )
 animation = &"Idle"
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_animated_sprite_animation_finished"]
