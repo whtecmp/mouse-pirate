@@ -1,0 +1,17 @@
+102b54792f6b2ef812636a2bdaeb9d34
+::res://::1645883501
+default_env.tres::Environment::-1::1645882245::0::1::::<><>::
+icon.png::StreamTexture2D::750148756766472308::1645828836::1645882298::1::::<><>::
+LICENSE.md::TextFile::-1::1645828876::0::1::::<><>::
+Main.tscn::PackedScene::7146027547022931064::1645883501::0::1::::<><>::uid://db42tfknm76tk
+Player.tscn::PackedScene::7290991417146742252::1645883501::0::1::::<><>::uid://csfoa2v8ax7o3<>uid://cayucnhgiiasm<>uid://cxghk2qt5aoa0<>res://Player.gd<>uid://c58j0mst6y3us<>uid://c872offxw7wg8<>uid://cs6aj8ct05pg3
+README.md::TextFile::-1::1645828779::0::1::::<><>::
+Player.gd::GDScript::-1::1645883196::0::1::::<>CharacterBody2D<>::
+::res://assets/::1645883491
+IdlePlayer.png::StreamTexture2D::6422122432871418382::1645865719::1645882298::1::::<><>::
+IdlePlayerWBandana.png::StreamTexture2D::6047413931611471504::1645865791::1645882298::1::::<><>::
+PlayerRun_01.png::StreamTexture2D::4823605038827576880::1645883321::1645883322::1::::<><>::
+PlayerRun_02.png::StreamTexture2D::6400015358224423697::1645881060::1645882298::1::::<><>::
+PlayerRun_03.png::StreamTexture2D::7156797926907017029::1645881512::1645882298::1::::<><>::
+PlayerRun_04.png::StreamTexture2D::6947222899186023866::1645881673::1645882298::1::::<><>::
+PlayerRun_05.png::StreamTexture2D::6100254072649823876::1645883539::1645883539::1::::<><>::
