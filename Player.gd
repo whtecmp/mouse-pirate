@@ -17,7 +17,7 @@ var input_to_function = {
 }
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -700.0
 var can_idle = true;
 var return_attack = false;
 var is_attacking = false;
