@@ -16,3 +16,4 @@ position = Vector2(1, 0)
 shape = SubResource( "RectangleShape2D_68hdq" )
 
 [connection signal="area_entered" from="." to="." method="_on_camera_controller_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_camera_controller_area_exited"]

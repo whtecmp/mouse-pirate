@@ -31,10 +31,10 @@ scale = Vector2(3.77206, 4.13194)
 texture = ExtResource( "2_x0y70" )
 
 [node name="Player" parent="." instance=ExtResource( "1" )]
-position = Vector2(439, 433)
+position = Vector2(443, 319)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-7, -59)
+position = Vector2(2, -165)
 __meta__ = {
 "_edit_group_": true
 }
@@ -51,165 +51,27 @@ offset_right = 486.0
 offset_bottom = 13.0
 color = Color(0, 0, 0, 1)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D3"]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3/StaticBody2D2"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/StaticBody2D2/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D3/StaticBody2D2"]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2"]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2"]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2"]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2"]
-position = Vector2(286, -87)
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2"]
-position = Vector2(493, 579)
-scale = Vector2(0.4, 1)
-shape = SubResource( "RectangleShape2D_fyi47" )
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D3/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/CollisionShape2D"]
-offset_left = -485.0
-offset_top = -10.0
-offset_right = 486.0
-offset_bottom = 13.0
-color = Color(0, 0, 0, 1)
-
 [node name="CameraController" parent="." instance=ExtResource( "5_pglo5" )]
-position = Vector2(518, 776)
+position = Vector2(518, 682)
 scale = Vector2(20, 10)
 
 [node name="CameraController2" parent="." instance=ExtResource( "5_pglo5" )]
-position = Vector2(508, 26)
-scale = Vector2(20, 1)
+position = Vector2(534, -98)
+scale = Vector2(20, 10)
 
 [node name="CameraController3" parent="." instance=ExtResource( "5_pglo5" )]
 position = Vector2(916, 245)
-scale = Vector2(5, 20)
+scale = Vector2(7, 20)
 
 [node name="CameraController4" parent="." instance=ExtResource( "5_pglo5" )]
 position = Vector2(110, 246)
-scale = Vector2(5, 20)
+scale = Vector2(7, 20)
 
-[connection signal="player_entered" from="CameraController" to="." method="_on_camera_controller_player_entered"]
-[connection signal="player_entered" from="CameraController2" to="." method="_on_camera_controller_player_entered"]
+[connection signal="player_entered" from="CameraController" to="." method="_on_camera_controller_player_entered_y"]
+[connection signal="player_exited" from="CameraController" to="." method="_on_camera_controller_player_exited_y"]
+[connection signal="player_entered" from="CameraController2" to="." method="_on_camera_controller_player_entered_y"]
+[connection signal="player_exited" from="CameraController2" to="." method="_on_camera_controller_player_exited_y"]
+[connection signal="player_entered" from="CameraController3" to="." method="_on_camera_controller_player_entered_x"]
+[connection signal="player_exited" from="CameraController3" to="." method="_on_camera_controller_player_exited_x"]
+[connection signal="player_entered" from="CameraController4" to="." method="_on_camera_controller_player_entered_x"]
+[connection signal="player_exited" from="CameraController4" to="." method="_on_camera_controller_player_exited_x"]
