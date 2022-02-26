@@ -16,12 +16,19 @@ var input_to_function = {
 	"left": null
 }
 
+signal look_up
+signal look_down
+signal look_reg
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var can_idle = true;
 var return_attack = false;
 var is_attacking = false;
 var is_fliped = false;
+var looking = false;
+var looked = false;
+var start_looking_time;
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -58,6 +65,25 @@ func _physics_process(delta):
 		if can_idle:
 			$AnimatedSprite.play("Idle") 
 	$AnimatedSprite.flip_h = is_fliped;
+	var look = Input.get_axis("ui_up", "ui_down");
+	if look:
+		if looking:
+			var looking_time = Time.get_time_dict_from_system().second - start_looking_time;
+			if looking_time >= 1:
+				looked = true;
+				if look < 0:
+					emit_signal("look_up")
+				else:
+					emit_signal("look_down")
+		else:
+			start_looking_time = Time.get_time_dict_from_system().second;
+			looking = true;
+	elif looked:
+		looked = false;
+		looking = false;
+		emit_signal("look_reg")
+	elif looking:
+		looking = false;
 	move_and_slide()
 
 

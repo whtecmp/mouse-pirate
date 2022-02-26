@@ -1,8 +1,14 @@
 extends Node2D
 
+const LOOK_DISTANCE = -60;
+
 var last_player_pos;
 var follow_player = Vector2(0, 0);
 var screen_size;
+var look_vec = Vector2(0, 0);
+var look = false;
+var looked = false;
+var stoped_looking = false;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport().get_visible_rect().size
@@ -19,6 +25,13 @@ func update_camera():
 	player_offset.x *= follow_player.x
 	player_offset.y *= follow_player.y
 	canvas_transform[2] += player_offset
+	if look and not looked:
+		canvas_transform[2] += look_vec * LOOK_DISTANCE;
+		looked = true;
+	elif stoped_looking:
+		canvas_transform[2] -= look_vec * LOOK_DISTANCE;
+		look_vec = Vector2(0, 0);
+		stoped_looking = false;
 	get_viewport().set_canvas_transform(canvas_transform)
 
 func _on_camera_controller_player_entered_x():
@@ -32,3 +45,16 @@ func _on_camera_controller_player_entered_y():
 
 func _on_camera_controller_player_exited_y():
 	follow_player -= Vector2(0, 1);
+
+func _on_player_look_down():
+	look_vec = Vector2(0, 1);
+	look = true;
+
+func _on_player_look_reg():
+	look = false;
+	looked = false;
+	stoped_looking = true;
+
+func _on_player_look_up():
+	look_vec = Vector2(0, -1)
+	look = true;

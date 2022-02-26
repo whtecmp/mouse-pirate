@@ -50,6 +50,9 @@ scale = Vector2(7, 20)
 position = Vector2(110, 246)
 scale = Vector2(7, 20)
 
+[connection signal="look_down" from="Player" to="." method="_on_player_look_down"]
+[connection signal="look_reg" from="Player" to="." method="_on_player_look_reg"]
+[connection signal="look_up" from="Player" to="." method="_on_player_look_up"]
 [connection signal="player_entered" from="CameraControllers/CameraController" to="." method="_on_camera_controller_player_entered_y"]
 [connection signal="player_exited" from="CameraControllers/CameraController" to="." method="_on_camera_controller_player_exited_y"]
 [connection signal="player_entered" from="CameraControllers/CameraController2" to="." method="_on_camera_controller_player_entered_y"]
