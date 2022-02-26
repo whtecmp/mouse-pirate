@@ -38,7 +38,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("a") and is_on_floor():
 		motion_velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_just_pressed("s"):
+	if Input.is_action_just_pressed("s") and not is_attacking:
 		$AnimatedSprite.play("Attack")
 		can_idle = false;
 		is_attacking = true;
