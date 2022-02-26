@@ -13,9 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dtadjbu5enqvo" path="res://assets/PlayerAttack_05.png" id="6_kll6q"]
 [ext_resource type="Texture2D" uid="uid://cs6aj8ct05pg3" path="res://assets/PlayerRun_05.png" id="7_vywq6"]
 
-[sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(22.5716, 30.3424)
-
 [sub_resource type="SpriteFrames" id="2"]
 animations = [{
 "frames": [ExtResource( "6" ), ExtResource( "3" ), ExtResource( "2" ), ExtResource( "5" ), ExtResource( "7_vywq6" )],
@@ -34,6 +31,9 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(22.5716, 30.3424)
+
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(31.3008, 96.4764)
 scale = Vector2(2, 2)
@@ -42,13 +42,19 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(15.8642, 16.2117)
-shape = SubResource( "1" )
-
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(14.6034, 18.4736)
 frames = SubResource( "2" )
 animation = &"Idle"
+
+[node name="PlayerArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
+position = Vector2(15.8642, 16.2117)
+shape = SubResource( "1" )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.8642, 16.2117)
+shape = SubResource( "1" )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_animated_sprite_animation_finished"]
