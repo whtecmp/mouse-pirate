@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ejmlv4l2mm4y"]
+[gd_scene load_steps=25 format=3 uid="uid://ejmlv4l2mm4y"]
 
 [ext_resource type="PackedScene" uid="uid://xaffngr07jti" path="res://mob.tscn" id="1_53g6t"]
 [ext_resource type="Script" path="res://enemy_mouse.gd" id="1_fumyh"]
@@ -7,11 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://bu7bmeqlut6ss" path="res://assets/EnemyRun_03.png" id="3_e46bl"]
 [ext_resource type="Texture2D" uid="uid://dryuecnpxtuta" path="res://assets/EnemyRun_02.png" id="4_kxmjo"]
 [ext_resource type="Texture2D" uid="uid://bfidj31vm5af1" path="res://assets/EnemyRun_04.png" id="5_f4pho"]
+[ext_resource type="Texture2D" uid="uid://bcjqdoyu8ii3l" path="res://assets/EnemyAttack_01.png" id="7_1346d"]
 [ext_resource type="Texture2D" uid="uid://ctbevyvwcw6jy" path="res://assets/EnemyRunHandWSword_01.png" id="8_0d78u"]
+[ext_resource type="Texture2D" uid="uid://disjxg5vvhnfl" path="res://assets/EnemyAttack_02.png" id="8_h1ha4"]
 [ext_resource type="Texture2D" uid="uid://blnuqq3ma7ykl" path="res://assets/EnemyRunHandWSword_02.png" id="9_qfwwi"]
+[ext_resource type="Texture2D" uid="uid://cxu5yr1mgebl4" path="res://assets/EnemyAttack_03.png" id="9_r8ua1"]
+[ext_resource type="Texture2D" uid="uid://s8uxjejwimbs" path="res://assets/EnemyAttack_04.png" id="10_3k0ym"]
 [ext_resource type="Texture2D" uid="uid://bts524mxd6ncl" path="res://assets/EnemyRunHandWSword_03.png" id="10_ye4nq"]
 [ext_resource type="Texture2D" uid="uid://c87fywtvcj74s" path="res://assets/EnemyRunHandWSword_04.png" id="11_4yosw"]
+[ext_resource type="Texture2D" uid="uid://d0ijq0kdjkdgy" path="res://assets/EnemyAttack_05.png" id="11_yhba1"]
 [ext_resource type="Texture2D" uid="uid://v0m3bane8a8a" path="res://assets/EnemyHandWSwordIdle.png" id="12_7rync"]
+[ext_resource type="Texture2D" uid="uid://cnguk4gvrtdhw" path="res://assets/EnemyAttackHandWSword_01.png" id="17_ve0t2"]
+[ext_resource type="Texture2D" uid="uid://djo3cyr371ckf" path="res://assets/EnemyAttackHandWSword_02.png" id="18_y8jie"]
+[ext_resource type="Texture2D" uid="uid://5etjsqm20jxi" path="res://assets/EnemyAttackHandWSword_03.png" id="19_4xnc4"]
+[ext_resource type="Texture2D" uid="uid://cy88xb8422dge" path="res://assets/EnemyAttackHandWSword_04.png" id="20_ln0dc"]
+[ext_resource type="Texture2D" uid="uid://btknq27odrt5o" path="res://assets/EnemyAttackHandWSword_05.png" id="21_6bmc2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f2f0u"]
 animations = [{
@@ -19,6 +29,11 @@ animations = [{
 "loop": true,
 "name": &"Run",
 "speed": 5.0
+}, {
+"frames": [ExtResource( "7_1346d" ), ExtResource( "8_h1ha4" ), ExtResource( "9_r8ua1" ), ExtResource( "10_3k0ym" ), ExtResource( "11_yhba1" )],
+"loop": true,
+"name": &"Attack",
+"speed": 20.0
 }, {
 "frames": [ExtResource( "2_bwgri" )],
 "loop": true,
@@ -32,6 +47,11 @@ animations = [{
 "loop": true,
 "name": &"Run",
 "speed": 5.0
+}, {
+"frames": [ExtResource( "17_ve0t2" ), ExtResource( "18_y8jie" ), ExtResource( "19_4xnc4" ), ExtResource( "20_ln0dc" ), ExtResource( "21_6bmc2" )],
+"loop": true,
+"name": &"Attack",
+"speed": 20.0
 }, {
 "frames": [ExtResource( "12_7rync" )],
 "loop": true,
@@ -53,9 +73,11 @@ position = Vector2(3, 7)
 [node name="MouseBody" type="AnimatedSprite2D" parent="Mob"]
 position = Vector2(14, 15)
 frames = SubResource( "SpriteFrames_f2f0u" )
-animation = &"Run"
+animation = &"Attack"
 
 [node name="MouseWeaponHand" type="AnimatedSprite2D" parent="Mob"]
 position = Vector2(14, 15)
 frames = SubResource( "SpriteFrames_1qi0g" )
-animation = &"Run"
+animation = &"Attack"
+
+[connection signal="animation_finished" from="Mob/MouseBody" to="." method="_on_mouse_body_animation_finished"]
