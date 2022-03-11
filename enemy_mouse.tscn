@@ -1,0 +1,61 @@
+[gd_scene load_steps=15 format=3 uid="uid://ejmlv4l2mm4y"]
+
+[ext_resource type="PackedScene" uid="uid://xaffngr07jti" path="res://mob.tscn" id="1_53g6t"]
+[ext_resource type="Script" path="res://enemy_mouse.gd" id="1_fumyh"]
+[ext_resource type="Texture2D" uid="uid://d3v0jg5n3cwep" path="res://assets/EnemyIdle.png" id="2_bwgri"]
+[ext_resource type="Texture2D" uid="uid://cufxh2ps1yx3j" path="res://assets/EnemyRun_01.png" id="2_kttgy"]
+[ext_resource type="Texture2D" uid="uid://bu7bmeqlut6ss" path="res://assets/EnemyRun_03.png" id="3_e46bl"]
+[ext_resource type="Texture2D" uid="uid://dryuecnpxtuta" path="res://assets/EnemyRun_02.png" id="4_kxmjo"]
+[ext_resource type="Texture2D" uid="uid://bfidj31vm5af1" path="res://assets/EnemyRun_04.png" id="5_f4pho"]
+[ext_resource type="Texture2D" uid="uid://ctbevyvwcw6jy" path="res://assets/EnemyRunHandWSword_01.png" id="8_0d78u"]
+[ext_resource type="Texture2D" uid="uid://blnuqq3ma7ykl" path="res://assets/EnemyRunHandWSword_02.png" id="9_qfwwi"]
+[ext_resource type="Texture2D" uid="uid://bts524mxd6ncl" path="res://assets/EnemyRunHandWSword_03.png" id="10_ye4nq"]
+[ext_resource type="Texture2D" uid="uid://c87fywtvcj74s" path="res://assets/EnemyRunHandWSword_04.png" id="11_4yosw"]
+[ext_resource type="Texture2D" uid="uid://v0m3bane8a8a" path="res://assets/EnemyHandWSwordIdle.png" id="12_7rync"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f2f0u"]
+animations = [{
+"frames": [ExtResource( "2_kttgy" ), ExtResource( "3_e46bl" ), ExtResource( "4_kxmjo" ), ExtResource( "5_f4pho" )],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
+"frames": [ExtResource( "2_bwgri" )],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qi0g"]
+animations = [{
+"frames": [ExtResource( "8_0d78u" ), ExtResource( "9_qfwwi" ), ExtResource( "10_ye4nq" ), ExtResource( "11_4yosw" )],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
+"frames": [ExtResource( "12_7rync" )],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="EnemyMouse" type="Node2D"]
+position = Vector2(-8, -14)
+scale = Vector2(2, 2)
+script = ExtResource( "1_fumyh" )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Mob" parent="." instance=ExtResource( "1_53g6t" )]
+position = Vector2(3, 7)
+
+[node name="MouseBody" type="AnimatedSprite2D" parent="Mob"]
+position = Vector2(14, 15)
+frames = SubResource( "SpriteFrames_f2f0u" )
+animation = &"Run"
+
+[node name="MouseWeaponHand" type="AnimatedSprite2D" parent="Mob"]
+position = Vector2(14, 15)
+frames = SubResource( "SpriteFrames_1qi0g" )
+animation = &"Run"

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://xaffngr07jti"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_ca3mp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4ino"]
+size = Vector2(22.5716, 30.3424)
+
+[node name="Mob" type="CharacterBody2D"]
+position = Vector2(-4, -2)
+script = ExtResource( "1_ca3mp" )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MobArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MobArea"]
+position = Vector2(15.8642, 16.2117)
+shape = SubResource( "RectangleShape2D_o4ino" )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.8642, 16.2117)
+shape = SubResource( "RectangleShape2D_o4ino" )

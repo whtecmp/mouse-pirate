@@ -15,6 +15,11 @@
 
 [sub_resource type="SpriteFrames" id="2"]
 animations = [{
+"frames": [ExtResource( "6" ), ExtResource( "3" ), ExtResource( "2" ), ExtResource( "5" ), ExtResource( "7_vywq6" )],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
 "frames": [ExtResource( "2_ce6mo" ), ExtResource( "3_a0qg6" ), ExtResource( "4_i2g18" ), ExtResource( "5_i1yor" ), ExtResource( "6_kll6q" )],
 "loop": false,
 "name": &"Attack",
@@ -23,11 +28,6 @@ animations = [{
 "frames": [ExtResource( "1" )],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [ExtResource( "6" ), ExtResource( "3" ), ExtResource( "2" ), ExtResource( "5" ), ExtResource( "7_vywq6" )],
-"loop": true,
-"name": &"Run",
 "speed": 5.0
 }]
 

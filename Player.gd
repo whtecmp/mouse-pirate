@@ -20,7 +20,7 @@ signal look_up
 signal look_down
 signal look_reg
 
-const SPEED = 300.0
+const SPEED = 350.0
 const JUMP_VELOCITY = -400.0
 var can_idle = true;
 var return_attack = false;

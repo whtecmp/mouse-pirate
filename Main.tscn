@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c82ubajo0by5e"]
+[gd_scene load_steps=6 format=3 uid="uid://c82ubajo0by5e"]
 
 [ext_resource type="PackedScene" uid="uid://db42tfknm76tk" path="res://Player.tscn" id="1"]
 [ext_resource type="Script" path="res://Main.gd" id="1_dnubg"]
+[ext_resource type="PackedScene" uid="uid://ejmlv4l2mm4y" path="res://enemy_mouse.tscn" id="4_ttlse"]
 [ext_resource type="PackedScene" uid="uid://mjngwxjcq67m" path="res://camera_controller.tscn" id="5_pglo5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyi47"]
@@ -11,7 +12,7 @@ size = Vector2(972, 20)
 script = ExtResource( "1_dnubg" )
 
 [node name="Player" parent="." instance=ExtResource( "1" )]
-position = Vector2(443, 319)
+position = Vector2(360.5, 243)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(2, -165)
@@ -32,7 +33,6 @@ offset_bottom = 13.0
 color = Color(0, 0, 0, 1)
 
 [node name="CameraControllers" type="Node2D" parent="."]
-visible = false
 
 [node name="CameraController" parent="CameraControllers" instance=ExtResource( "5_pglo5" )]
 position = Vector2(518, 682)
@@ -49,6 +49,9 @@ scale = Vector2(7, 20)
 [node name="CameraController4" parent="CameraControllers" instance=ExtResource( "5_pglo5" )]
 position = Vector2(110, 246)
 scale = Vector2(7, 20)
+
+[node name="EnemyMouse" parent="." instance=ExtResource( "4_ttlse" )]
+position = Vector2(453.5, 250.5)
 
 [connection signal="look_down" from="Player" to="." method="_on_player_look_down"]
 [connection signal="look_reg" from="Player" to="." method="_on_player_look_reg"]
