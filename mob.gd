@@ -9,6 +9,7 @@ var wants_jump = false;
 var wants_attack = false;
 var is_attacking = false;
 var return_attack = false;
+var attack_idle = false;
 var can_idle = true;
 var walk = false;
 var direction = 0;
@@ -36,7 +37,7 @@ func assess_relative_position_to_objective(objective, min_distance_threshold, ma
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		motion_velocity.y += gravity * delta
+		velocity.y += gravity * delta
 	
 	var relative_position_to_objective = assess_relative_position_to_objective(get_tree().get_root().get_node("Main/Player"), 60, 500);
 	{ # switch case relative_position_to_objective
@@ -58,26 +59,27 @@ func _physics_process(delta):
 			_self.wants_attack = true;
 	}[relative_position_to_objective].call(self);
 
-	if wants_attack and not is_attacking:
+	if wants_attack and not is_attacking and not attack_idle:
 		wants_attack = false;
 		play_animation.call("Attack");
 		is_attacking = true;
 		can_idle = false;
+		attack_idle = true;
+		$AttackTimer.start()
 
 	# Handle Jump.
 	if wants_jump and is_on_floor() and not is_attacking:
-		motion_velocity.y = JUMP_VELOCITY
+		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	print (can_idle)
 	if walk and not is_attacking:
-		motion_velocity.x = direction * SPEED
+		velocity.x = direction * SPEED
 		play_animation.call("Run")
 	else:
 		if can_idle:
 			play_animation.call("Idle")
-		motion_velocity.x = move_toward(motion_velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if walk and not is_attacking and direction > 0:
 		flip.call(false);
 	elif walk and not is_attacking and direction < 0:
@@ -95,3 +97,7 @@ func attack_finished():
 		stop_animation.call()
 		play_animation.call("Attack", true)
 		return_attack = true;
+
+
+func _on_attack_timer_timeout():
+	attack_idle = false;

@@ -21,3 +21,9 @@ shape = SubResource( "RectangleShape2D_o4ino" )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(15.8642, 16.2117)
 shape = SubResource( "RectangleShape2D_o4ino" )
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

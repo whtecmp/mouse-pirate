@@ -25,6 +25,11 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f2f0u"]
 animations = [{
+"frames": [ExtResource( "2_bwgri" )],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
 "frames": [ExtResource( "2_kttgy" ), ExtResource( "3_e46bl" ), ExtResource( "4_kxmjo" ), ExtResource( "5_f4pho" )],
 "loop": true,
 "name": &"Run",
@@ -34,15 +39,15 @@ animations = [{
 "loop": true,
 "name": &"Attack",
 "speed": 20.0
-}, {
-"frames": [ExtResource( "2_bwgri" )],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qi0g"]
 animations = [{
+"frames": [ExtResource( "12_7rync" )],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
 "frames": [ExtResource( "8_0d78u" ), ExtResource( "9_qfwwi" ), ExtResource( "10_ye4nq" ), ExtResource( "11_4yosw" )],
 "loop": true,
 "name": &"Run",
@@ -52,11 +57,6 @@ animations = [{
 "loop": true,
 "name": &"Attack",
 "speed": 20.0
-}, {
-"frames": [ExtResource( "12_7rync" )],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
 }]
 
 [node name="EnemyMouse" type="Node2D"]
