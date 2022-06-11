@@ -16,6 +16,7 @@ var direction = 0;
 var play_animation;
 var stop_animation;
 var flip;
+var look_direction = RIGHT;
 
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -85,6 +86,10 @@ func _physics_process(delta):
 	elif walk and not is_attacking and direction < 0:
 		flip.call(true);
 
+	if velocity.x < 0:
+		look_direction = LEFT;
+	elif velocity.x > 0: 
+		look_direction = RIGHT;
 	move_and_slide()
 
 func attack_finished():

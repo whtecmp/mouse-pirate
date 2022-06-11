@@ -98,3 +98,7 @@ func _on_animated_sprite_animation_finished():
 			$AnimatedSprite.stop()
 			$AnimatedSprite.play("Attack", true)
 			return_attack = true;
+
+
+func _on_player_area_body_entered(body):
+	print (body.get_name())

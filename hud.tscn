@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://fq3eu1yu4buo"]
+
+[node name="HUD" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 413.0
+offset_bottom = 288.0
+theme_override_font_sizes/font_size = 50
+text = "0"

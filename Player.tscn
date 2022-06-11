@@ -35,12 +35,9 @@ animations = [{
 size = Vector2(22.5716, 30.3424)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(31.3008, 96.4764)
+position = Vector2(30, 61)
 scale = Vector2(2, 2)
 script = ExtResource( "4" )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(14.6034, 18.4736)
@@ -58,3 +55,4 @@ position = Vector2(15.8642, 16.2117)
 shape = SubResource( "1" )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_animated_sprite_animation_finished"]
+[connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]
