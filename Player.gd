@@ -1,21 +1,5 @@
 extends CharacterBody2D
 
-var control_scheme = "Keyboard";
-var control_scheme_to_key_to_input = {
-	"Keyboard": {
-		"ui_left": "left",
-		"ui_right": "right",
-		"ui_up": "up",
-		"ui_down": "down",
-		"z": "jump",
-		"x": "attack",
-	}
-}
-
-var input_to_function = {
-	"left": null
-}
-
 signal look_up
 signal look_down
 signal look_reg
@@ -24,6 +8,7 @@ const SPEED = 350.0
 const INITIAL_JUMP_VELOCITY = -150.0
 const MAX_JUMP_VELOCITY = -270.0
 const JUMP_VELOCITY_INTERVAL = -30;
+
 var can_idle = true;
 var return_attack = false;
 var is_attacking = false;
