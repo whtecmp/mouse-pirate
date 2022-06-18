@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhxlvb4pw2om4"]
+
+[ext_resource type="Script" path="res://attack_detector.gd" id="1_se7qh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1hpv"]
+size = Vector2(14, 4.5)
+
+[node name="AttackDetector" type="Area2D"]
+script = ExtResource( "1_se7qh" )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(30, 15.75)
+shape = SubResource( "RectangleShape2D_c1hpv" )
