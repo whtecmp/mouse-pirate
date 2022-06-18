@@ -21,7 +21,9 @@ signal look_down
 signal look_reg
 
 const SPEED = 350.0
-const JUMP_VELOCITY = -400.0
+const INITIAL_JUMP_VELOCITY = -150.0
+const MAX_JUMP_VELOCITY = -270.0
+const JUMP_VELOCITY_INTERVAL = -30;
 var can_idle = true;
 var return_attack = false;
 var is_attacking = false;
@@ -29,6 +31,7 @@ var is_fliped = false;
 var looking = false;
 var looked = false;
 var start_looking_time;
+var jumping = false;
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -42,8 +45,14 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle Jump.
+	if Input.is_action_pressed("a") and jumping and abs(velocity.y) < abs(MAX_JUMP_VELOCITY):
+		velocity.y += JUMP_VELOCITY_INTERVAL;
+	else:
+		jumping = false;
 	if Input.is_action_just_pressed("a") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = INITIAL_JUMP_VELOCITY
+		jumping = true;
+	
 	
 	if Input.is_action_just_pressed("s") and not is_attacking:
 		$AnimatedSprite.play("Attack")
