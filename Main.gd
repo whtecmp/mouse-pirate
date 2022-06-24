@@ -24,6 +24,7 @@ func update_camera():
 	var player_offset = last_player_pos - $Player/PlayerBody.position
 	player_offset.x *= follow_player.x
 	player_offset.y *= follow_player.y
+	player_offset *= 2;
 	canvas_transform[2] += player_offset
 	if look and not looked:
 		canvas_transform[2] += look_vec * LOOK_DISTANCE;
@@ -35,11 +36,9 @@ func update_camera():
 	get_viewport().set_canvas_transform(canvas_transform)
 
 func _on_camera_controller_player_entered_x():
-	print ('Entered')
 	follow_player += Vector2(1, 0);
 
 func _on_camera_controller_player_exited_x():
-	print ('Exited')
 	follow_player -= Vector2(1, 0);
 
 func _on_camera_controller_player_entered_y():
