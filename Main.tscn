@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c82ubajo0by5e"]
 
-[ext_resource type="PackedScene" uid="uid://db42tfknm76tk" path="res://Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bf6o60g4i0d0j" path="res://Player.tscn" id="1"]
 [ext_resource type="Script" path="res://Main.gd" id="1_dnubg"]
 [ext_resource type="PackedScene" uid="uid://ejmlv4l2mm4y" path="res://enemy_mouse.tscn" id="4_ttlse"]
 [ext_resource type="PackedScene" uid="uid://fq3eu1yu4buo" path="res://hud.tscn" id="5_77i0p"]
@@ -15,9 +15,6 @@ script = ExtResource( "1_dnubg" )
 
 [node name="Player" parent="." instance=ExtResource( "1" )]
 position = Vector2(360.5, 243)
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(2, -165)
@@ -64,9 +61,6 @@ script = ExtResource( "5_ff42n" )
 [node name="HUD" parent="FollowView" instance=ExtResource( "5_77i0p" )]
 position = Vector2(0, -16)
 
-[connection signal="look_down" from="Player" to="." method="_on_player_look_down"]
-[connection signal="look_reg" from="Player" to="." method="_on_player_look_reg"]
-[connection signal="look_up" from="Player" to="." method="_on_player_look_up"]
 [connection signal="player_entered" from="CameraControllers/CameraController" to="." method="_on_camera_controller_player_entered_y"]
 [connection signal="player_exited" from="CameraControllers/CameraController" to="." method="_on_camera_controller_player_exited_y"]
 [connection signal="player_entered" from="CameraControllers/CameraController2" to="." method="_on_camera_controller_player_entered_y"]

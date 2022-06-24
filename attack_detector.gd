@@ -6,4 +6,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var value = str(get_node("..").name) + '-' + str(name) + ': ' + str(get_overlapping_areas())
+	# print (value)

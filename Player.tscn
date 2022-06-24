@@ -1,25 +1,21 @@
-[gd_scene load_steps=16 format=3 uid="uid://db42tfknm76tk"]
+[gd_scene load_steps=16 format=3 uid="uid://bf6o60g4i0d0j"]
 
 [ext_resource type="Texture2D" uid="uid://csfoa2v8ax7o3" path="res://assets/IdlePlayerWBandana.png" id="1"]
+[ext_resource type="Script" path="res://PlayerBody.gd" id="1_22jme"]
 [ext_resource type="Texture2D" uid="uid://cayucnhgiiasm" path="res://assets/PlayerRun_01.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://cnltqwttpv86w" path="res://assets/PlayerAttack_01.png" id="2_ce6mo"]
 [ext_resource type="Texture2D" uid="uid://cxghk2qt5aoa0" path="res://assets/PlayerRun_02.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dfl2qo3sn37vh" path="res://assets/PlayerAttack_02.png" id="3_a0qg6"]
-[ext_resource type="Script" path="res://Player.gd" id="4"]
 [ext_resource type="Texture2D" uid="uid://bqyelk8q3ap11" path="res://assets/PlayerAttack_03.png" id="4_i2g18"]
 [ext_resource type="Texture2D" uid="uid://c58j0mst6y3us" path="res://assets/PlayerRun_04.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://cabuyw77y3lw0" path="res://assets/PlayerAttack_04.png" id="5_i1yor"]
 [ext_resource type="Texture2D" uid="uid://c872offxw7wg8" path="res://assets/PlayerRun_03.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://dtadjbu5enqvo" path="res://assets/PlayerAttack_05.png" id="6_kll6q"]
 [ext_resource type="Texture2D" uid="uid://cs6aj8ct05pg3" path="res://assets/PlayerRun_05.png" id="7_vywq6"]
+[ext_resource type="PackedScene" uid="uid://bhxlvb4pw2om4" path="res://attack_detector.tscn" id="13_xnd12"]
 
 [sub_resource type="SpriteFrames" id="2"]
 animations = [{
-"frames": [ExtResource( "2_ce6mo" ), ExtResource( "3_a0qg6" ), ExtResource( "4_i2g18" ), ExtResource( "5_i1yor" ), ExtResource( "6_kll6q" )],
-"loop": false,
-"name": &"Attack",
-"speed": 20.0
-}, {
 "frames": [ExtResource( "6" ), ExtResource( "3" ), ExtResource( "2" ), ExtResource( "5" ), ExtResource( "7_vywq6" )],
 "loop": true,
 "name": &"Run",
@@ -29,48 +25,47 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
+}, {
+"frames": [ExtResource( "2_ce6mo" ), ExtResource( "3_a0qg6" ), ExtResource( "4_i2g18" ), ExtResource( "5_i1yor" ), ExtResource( "6_kll6q" )],
+"loop": false,
+"name": &"Attack",
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(22.5716, 30.3424)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb2t3"]
-size = Vector2(14, 4.5)
-
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="Node2D"]
 position = Vector2(30, 61)
 scale = Vector2(2, 2)
-script = ExtResource( "4" )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+[node name="PlayerBody" type="CharacterBody2D" parent="."]
+script = ExtResource( "1_22jme" )
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="PlayerBody"]
 position = Vector2(14.6034, 18.4736)
 frames = SubResource( "2" )
-animation = &"Idle"
+animation = &"Attack"
 
-[node name="PlayerArea" type="Area2D" parent="."]
+[node name="PlayerArea" type="Area2D" parent="PlayerBody"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody/PlayerArea"]
 position = Vector2(15.8642, 16.2117)
 shape = SubResource( "1" )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody"]
 position = Vector2(15.8642, 16.2117)
 shape = SubResource( "1" )
 
-[node name="AttackDetector" type="Area2D" parent="."]
+[node name="Detectors" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetector"]
-position = Vector2(30, 15.75)
-shape = SubResource( "RectangleShape2D_qb2t3" )
+[node name="AttackDetectorRight" parent="Detectors" instance=ExtResource( "13_xnd12" )]
+position = Vector2(-5.5, -1)
 
-[node name="AttackDetector2" type="Area2D" parent="."]
+[node name="AttackDetectorLeft" parent="Detectors" instance=ExtResource( "13_xnd12" )]
+position = Vector2(-25, -1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetector2"]
-position = Vector2(-2, 16.5)
-shape = SubResource( "RectangleShape2D_qb2t3" )
-
-[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_animated_sprite_animation_finished"]
-[connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]
+[connection signal="animation_finished" from="PlayerBody/AnimatedSprite" to="PlayerBody" method="_on_animated_sprite_animation_finished"]

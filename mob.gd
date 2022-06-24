@@ -40,7 +40,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	var relative_position_to_objective = assess_relative_position_to_objective(get_tree().get_root().get_node("Main/Player"), 60, 500);
+	var relative_position_to_objective = assess_relative_position_to_objective(get_tree().get_root().get_node("Main/Player/PlayerBody"), 60, 500);
 	{ # switch case relative_position_to_objective
 		LEFT: func (_self):
 			_self.walk = true;
@@ -90,7 +90,11 @@ func _physics_process(delta):
 		look_direction = LEFT;
 	elif velocity.x > 0: 
 		look_direction = RIGHT;
-	move_and_slide()
+	var last_position = position;
+	move_and_slide();
+	var mob = get_node("..");
+	mob.get_node("Detectors").position += position - last_position;
+
 
 func attack_finished():
 	if return_attack:

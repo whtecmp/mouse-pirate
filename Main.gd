@@ -12,16 +12,16 @@ var stoped_looking = false;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport().get_visible_rect().size
-	last_player_pos = $Player.position
+	last_player_pos = $Player/PlayerBody.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	update_camera()
-	last_player_pos = $Player.position
+	last_player_pos = $Player/PlayerBody.position
 
 func update_camera():
 	var canvas_transform = get_viewport().get_canvas_transform()
-	var player_offset = last_player_pos - $Player.position
+	var player_offset = last_player_pos - $Player/PlayerBody.position
 	player_offset.x *= follow_player.x
 	player_offset.y *= follow_player.y
 	canvas_transform[2] += player_offset
@@ -35,9 +35,11 @@ func update_camera():
 	get_viewport().set_canvas_transform(canvas_transform)
 
 func _on_camera_controller_player_entered_x():
+	print ('Entered')
 	follow_player += Vector2(1, 0);
 
 func _on_camera_controller_player_exited_x():
+	print ('Exited')
 	follow_player -= Vector2(1, 0);
 
 func _on_camera_controller_player_entered_y():

@@ -5,9 +5,9 @@ signal look_down
 signal look_reg
 
 const SPEED = 350.0
-const INITIAL_JUMP_VELOCITY = -150.0
-const MAX_JUMP_VELOCITY = -270.0
-const JUMP_VELOCITY_INTERVAL = -30;
+const INITIAL_JUMP_VELOCITY = -200.0
+const MAX_JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY_INTERVAL = -33;
 
 var can_idle = true;
 var return_attack = false;
@@ -78,7 +78,10 @@ func _physics_process(delta):
 		emit_signal("look_reg")
 	elif looking:
 		looking = false;
-	move_and_slide()
+	var last_position = position;
+	move_and_slide();
+	var player = get_node("..");
+	player.get_node("Detectors").position += position - last_position;
 
 
 func _on_animated_sprite_animation_finished():
@@ -92,7 +95,3 @@ func _on_animated_sprite_animation_finished():
 			$AnimatedSprite.stop()
 			$AnimatedSprite.play("Attack", true)
 			return_attack = true;
-
-
-func _on_player_area_body_entered(body):
-	print (body.get_name())

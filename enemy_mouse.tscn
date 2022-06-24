@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ejmlv4l2mm4y"]
+[gd_scene load_steps=26 format=3 uid="uid://ejmlv4l2mm4y"]
 
 [ext_resource type="PackedScene" uid="uid://xaffngr07jti" path="res://mob.tscn" id="1_53g6t"]
 [ext_resource type="Script" path="res://enemy_mouse.gd" id="1_fumyh"]
@@ -22,14 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://5etjsqm20jxi" path="res://assets/EnemyAttackHandWSword_03.png" id="19_4xnc4"]
 [ext_resource type="Texture2D" uid="uid://cy88xb8422dge" path="res://assets/EnemyAttackHandWSword_04.png" id="20_ln0dc"]
 [ext_resource type="Texture2D" uid="uid://btknq27odrt5o" path="res://assets/EnemyAttackHandWSword_05.png" id="21_6bmc2"]
+[ext_resource type="PackedScene" uid="uid://bhxlvb4pw2om4" path="res://attack_detector.tscn" id="23_4tico"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f2f0u"]
 animations = [{
-"frames": [ExtResource( "7_1346d" ), ExtResource( "8_h1ha4" ), ExtResource( "9_r8ua1" ), ExtResource( "10_3k0ym" ), ExtResource( "11_yhba1" )],
-"loop": true,
-"name": &"Attack",
-"speed": 20.0
-}, {
 "frames": [ExtResource( "2_kttgy" ), ExtResource( "3_e46bl" ), ExtResource( "4_kxmjo" ), ExtResource( "5_f4pho" )],
 "loop": true,
 "name": &"Run",
@@ -39,15 +35,15 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
+}, {
+"frames": [ExtResource( "7_1346d" ), ExtResource( "8_h1ha4" ), ExtResource( "9_r8ua1" ), ExtResource( "10_3k0ym" ), ExtResource( "11_yhba1" )],
+"loop": true,
+"name": &"Attack",
+"speed": 20.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qi0g"]
 animations = [{
-"frames": [ExtResource( "17_ve0t2" ), ExtResource( "18_y8jie" ), ExtResource( "19_4xnc4" ), ExtResource( "20_ln0dc" ), ExtResource( "21_6bmc2" )],
-"loop": true,
-"name": &"Attack",
-"speed": 20.0
-}, {
 "frames": [ExtResource( "8_0d78u" ), ExtResource( "9_qfwwi" ), ExtResource( "10_ye4nq" ), ExtResource( "11_4yosw" )],
 "loop": true,
 "name": &"Run",
@@ -57,10 +53,15 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
+}, {
+"frames": [ExtResource( "17_ve0t2" ), ExtResource( "18_y8jie" ), ExtResource( "19_4xnc4" ), ExtResource( "21_6bmc2" ), ExtResource( "20_ln0dc" )],
+"loop": true,
+"name": &"Attack",
+"speed": 20.0
 }]
 
 [node name="EnemyMouse" type="Node2D"]
-position = Vector2(-8, -14)
+position = Vector2(-5, -9)
 scale = Vector2(2, 2)
 script = ExtResource( "1_fumyh" )
 __meta__ = {
@@ -79,5 +80,16 @@ animation = &"Attack"
 position = Vector2(14, 15)
 frames = SubResource( "SpriteFrames_1qi0g" )
 animation = &"Attack"
+frame = 4
+
+[node name="Detectors" type="Node2D" parent="."]
+
+[node name="AttackDetectorRight" parent="Detectors" instance=ExtResource( "23_4tico" )]
+position = Vector2(-1, 8.5)
+scale = Vector2(1.13, 1)
+
+[node name="AttackDetectorLeft" parent="Detectors" instance=ExtResource( "23_4tico" )]
+position = Vector2(-37, 8.5)
+scale = Vector2(1.2769, 1)
 
 [connection signal="animation_finished" from="Mob/MouseBody" to="." method="_on_mouse_body_animation_finished"]
