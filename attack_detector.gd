@@ -7,4 +7,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var value = str(get_node("..").name) + '-' + str(name) + ': ' + str(get_overlapping_areas())
-	print (value)
+	# print (value)
+
+
+func _on_attack_detector_body_entered(body):
+	print (body.name)
