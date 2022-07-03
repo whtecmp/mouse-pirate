@@ -98,5 +98,5 @@ func _on_animated_sprite_animation_finished():
 			return_attack = true;
 			emit_signal("attack_finished")
 
-func hit_by_mob():
-	get_node("..").hit_by_mob();
+func hit_by(who_hit):
+	get_node("..").hit_by(who_hit);

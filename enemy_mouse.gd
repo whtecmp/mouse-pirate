@@ -14,13 +14,15 @@ func _ready():
 		_self.get_node("Mob/MouseBody").play(anim, backwards);
 		_self.get_node("Mob/MouseWeaponHand").play(anim, backwards);
 	$Mob.flip = flip;
+	$Mob.whoami = "enemy_mouse"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func hit_by_player():
-	queue_free();
+func hit_by(who_hit):
+	if who_hit == "player":
+		queue_free();
 
 func _on_mouse_body_animation_finished():
 	if $Mob/MouseBody.animation == "Attack":

@@ -18,8 +18,8 @@ func _process(delta):
 		else:
 			in_range_bodies = $Detectors/AttackDetectorLeft.get_overlapping_bodies()
 		for body in in_range_bodies:
-			if body.has_method("hit_by_player"):
-				body.hit_by_player()
+			if body.has_method("hit_by"):
+				body.hit_by("player")
 	
 
 func _on_attack_is_on_timer_timeout():
@@ -30,6 +30,7 @@ func _on_player_body_attack_finished():
 	$AttackIsOnTimer.start();
 	attack_is_on = true;
 
-func hit_by_mob():
-	hits += 1
-	emit_signal("player_change_hit_points", hits)
+func hit_by(who_hit):
+	if who_hit == "enemy_mouse":
+		hits += 1
+		emit_signal("player_change_hit_points", hits)

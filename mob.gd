@@ -18,6 +18,7 @@ var stop_animation;
 var flip;
 var look_direction = RIGHT;
 var attack_is_on = false;
+var whoami;
 
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -44,8 +45,8 @@ func manage_attack():
 		elif look_direction == LEFT:
 			in_range_bodies = get_node("../Detectors/AttackDetectorLeft").get_overlapping_bodies()
 		for body in in_range_bodies:
-			if body.has_method("hit_by_mob"):
-				body.hit_by_mob()
+			if body.has_method("hit_by"):
+				body.hit_by(whoami)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -124,8 +125,8 @@ func attack_finished():
 		attack_is_on = true;
 
 
-func hit_by_player():
-	get_node("..").hit_by_player();
+func hit_by(who_hit):
+	get_node("..").hit_by(who_hit);
 
 func _on_attack_timer_timeout():
 	attack_idle = false;
