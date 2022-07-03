@@ -20,8 +20,8 @@ func _ready():
 func _process(delta):
 	pass
 
-func hit_by(who_hit):
-	if who_hit == "player":
+func hit_by(who):
+	if who == "player":
 		queue_free();
 
 func _on_mouse_body_animation_finished():

@@ -125,8 +125,8 @@ func attack_finished():
 		attack_is_on = true;
 
 
-func hit_by(who_hit):
-	get_node("..").hit_by(who_hit);
+func hit_by(who):
+	get_node("..").hit_by(who);
 
 func _on_attack_timer_timeout():
 	attack_idle = false;

@@ -30,7 +30,7 @@ func _on_player_body_attack_finished():
 	$AttackIsOnTimer.start();
 	attack_is_on = true;
 
-func hit_by(who_hit):
-	if who_hit == "enemy_mouse":
+func hit_by(who):
+	if who == "enemy_mouse":
 		hits += 1
 		emit_signal("player_change_hit_points", hits)
