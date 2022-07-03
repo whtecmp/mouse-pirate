@@ -3,6 +3,7 @@ extends CharacterBody2D
 signal look_up
 signal look_down
 signal look_reg
+signal attack_finished
 
 const SPEED = 350.0
 const INITIAL_JUMP_VELOCITY = -200.0
@@ -95,3 +96,4 @@ func _on_animated_sprite_animation_finished():
 			$AnimatedSprite.stop()
 			$AnimatedSprite.play("Attack", true)
 			return_attack = true;
+			emit_signal("attack_finished")

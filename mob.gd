@@ -108,5 +108,9 @@ func attack_finished():
 		return_attack = true;
 
 
+func hit_by_player():
+	queue_free();
+
+
 func _on_attack_timer_timeout():
 	attack_idle = false;

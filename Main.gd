@@ -13,6 +13,9 @@ var stoped_looking = false;
 func _ready():
 	screen_size = get_viewport().get_visible_rect().size
 	last_player_pos = $Player/PlayerBody.position
+	$Player/PlayerBody.look_down.connect(_on_player_look_down);
+	$Player/PlayerBody.look_reg.connect(_on_player_look_reg);
+	$Player/PlayerBody.look_up.connect(_on_player_look_up);
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

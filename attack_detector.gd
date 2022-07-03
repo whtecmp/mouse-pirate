@@ -11,4 +11,5 @@ func _process(delta):
 
 
 func _on_attack_detector_body_entered(body):
-	print (body.name)
+	# emit_signal("object_entered_attack_range", get_node("."), body)
+	pass
