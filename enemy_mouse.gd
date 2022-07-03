@@ -19,6 +19,8 @@ func _ready():
 func _process(delta):
 	pass
 
+func hit_by_player():
+	queue_free();
 
 func _on_mouse_body_animation_finished():
 	if $Mob/MouseBody.animation == "Attack":

@@ -61,6 +61,7 @@ script = ExtResource( "5_ff42n" )
 [node name="HUD" parent="FollowView" instance=ExtResource( "5_77i0p" )]
 position = Vector2(0, -16)
 
+[connection signal="player_change_hit_points" from="Player" to="." method="_on_player_player_change_hit_points"]
 [connection signal="player_entered" from="CameraControllers/CameraController" to="." method="_on_camera_controller_player_entered_y"]
 [connection signal="player_exited" from="CameraControllers/CameraController" to="." method="_on_camera_controller_player_exited_y"]
 [connection signal="player_entered" from="CameraControllers/CameraController2" to="." method="_on_camera_controller_player_entered_y"]

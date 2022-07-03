@@ -17,6 +17,7 @@ var play_animation;
 var stop_animation;
 var flip;
 var look_direction = RIGHT;
+var attack_is_on = false;
 
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -34,6 +35,17 @@ func assess_relative_position_to_objective(objective, min_distance_threshold, ma
 		return TOO_CLOSE_RIGHT;
 	else:
 		return TOO_FAR;
+
+func manage_attack():
+	if attack_is_on:
+		var in_range_bodies;
+		if look_direction == RIGHT:
+			in_range_bodies = get_node("../Detectors/AttackDetectorRight").get_overlapping_bodies()
+		elif look_direction == LEFT:
+			in_range_bodies = get_node("../Detectors/AttackDetectorLeft").get_overlapping_bodies()
+		for body in in_range_bodies:
+			if body.has_method("hit_by_mob"):
+				body.hit_by_mob()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -86,6 +98,8 @@ func _physics_process(delta):
 	elif walk and not is_attacking and direction < 0:
 		flip.call(true);
 
+	manage_attack()
+
 	if velocity.x < 0:
 		look_direction = LEFT;
 	elif velocity.x > 0: 
@@ -106,11 +120,15 @@ func attack_finished():
 		stop_animation.call()
 		play_animation.call("Attack", true)
 		return_attack = true;
+		$AttackIsOnTimer.start();
+		attack_is_on = true;
 
 
 func hit_by_player():
-	queue_free();
-
+	get_node("..").hit_by_player();
 
 func _on_attack_timer_timeout():
 	attack_idle = false;
+
+func _on_attack_is_on_timer_timeout():
+	attack_is_on = false;

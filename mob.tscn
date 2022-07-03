@@ -26,4 +26,8 @@ shape = SubResource( "RectangleShape2D_o4ino" )
 wait_time = 1.5
 one_shot = true
 
+[node name="AttackIsOnTimer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="AttackIsOnTimer" to="." method="_on_attack_is_on_timer_timeout"]

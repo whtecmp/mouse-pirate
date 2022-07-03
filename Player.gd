@@ -1,6 +1,9 @@
 extends Node2D
 
+signal player_change_hit_points(new_value)
+
 var attack_is_on = false;
+var hits = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,3 +29,7 @@ func _on_attack_is_on_timer_timeout():
 func _on_player_body_attack_finished():
 	$AttackIsOnTimer.start();
 	attack_is_on = true;
+
+func hit_by_mob():
+	hits += 1
+	emit_signal("player_change_hit_points", hits)

@@ -62,3 +62,7 @@ func _on_player_look_reg():
 func _on_player_look_up():
 	look_vec = Vector2(0, -1)
 	look = true;
+
+
+func _on_player_player_change_hit_points(new_value):
+	$FollowView/HUD/Label.text = str(new_value)

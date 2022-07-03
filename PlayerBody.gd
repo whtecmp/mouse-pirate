@@ -97,3 +97,6 @@ func _on_animated_sprite_animation_finished():
 			$AnimatedSprite.play("Attack", true)
 			return_attack = true;
 			emit_signal("attack_finished")
+
+func hit_by_mob():
+	get_node("..").hit_by_mob();
