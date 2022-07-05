@@ -1,17 +1,52 @@
-[gd_scene load_steps=8 format=3 uid="uid://c82ubajo0by5e"]
+[gd_scene load_steps=13 format=3 uid="uid://c82ubajo0by5e"]
 
 [ext_resource type="PackedScene" uid="uid://bf6o60g4i0d0j" path="res://Player.tscn" id="1"]
 [ext_resource type="Script" path="res://Main.gd" id="1_dnubg"]
+[ext_resource type="Shader" path="res://Main_background1.gdshader" id="2_wjx60"]
+[ext_resource type="Texture2D" uid="uid://drdc7vxy7sj7" path="res://assets/Background-wall-sized.png" id="3_1ncfi"]
+[ext_resource type="Texture2D" uid="uid://lqjfou6wkj18" path="res://assets/Background-sized.png" id="3_lvsd5"]
 [ext_resource type="PackedScene" uid="uid://ejmlv4l2mm4y" path="res://enemy_mouse.tscn" id="4_ttlse"]
 [ext_resource type="PackedScene" uid="uid://fq3eu1yu4buo" path="res://hud.tscn" id="5_77i0p"]
 [ext_resource type="Script" path="res://FollowView.gd" id="5_ff42n"]
 [ext_resource type="PackedScene" uid="uid://mjngwxjcq67m" path="res://camera_controller.tscn" id="5_pglo5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7l6px"]
+shader = ExtResource( "2_wjx60" )
+shader_param/scroll_speed_x = null
+shader_param/scroll_speed_y = null
+shader_param/background_distance_x = null
+shader_param/background_distance_y = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l4sy5"]
+shader = ExtResource( "2_wjx60" )
+shader_param/scroll_speed_x = null
+shader_param/scroll_speed_y = null
+shader_param/background_distance_x = null
+shader_param/background_distance_y = null
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyi47"]
 size = Vector2(972, 20)
 
 [node name="Main" type="Node2D"]
 script = ExtResource( "1_dnubg" )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="B2" type="TextureRect" parent="Background"]
+material = SubResource( "ShaderMaterial_7l6px" )
+offset_right = 1088.0
+offset_bottom = 576.0
+texture = ExtResource( "3_lvsd5" )
+stretch_mode = 1
+
+[node name="B1" type="TextureRect" parent="Background"]
+material = SubResource( "ShaderMaterial_l4sy5" )
+offset_left = -405.0
+offset_top = 1.0
+offset_right = 1771.0
+offset_bottom = 577.0
+texture = ExtResource( "3_1ncfi" )
+stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource( "1" )]
 position = Vector2(360.5, 243)

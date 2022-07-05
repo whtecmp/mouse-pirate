@@ -22,14 +22,14 @@ animations = [{
 "name": &"Attack",
 "speed": 20.0
 }, {
-"frames": [ExtResource( "1" )],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
 "frames": [ExtResource( "6" ), ExtResource( "3" ), ExtResource( "2" ), ExtResource( "5" ), ExtResource( "7_vywq6" )],
 "loop": true,
 "name": &"Run",
+"speed": 5.0
+}, {
+"frames": [ExtResource( "1" )],
+"loop": true,
+"name": &"Idle",
 "speed": 5.0
 }]
 
