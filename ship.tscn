@@ -54,13 +54,13 @@ b = Vector2(15, 1.75)
 
 [node name="Ship" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(602, 105)
-scale = Vector2(3, 3)
-texture = ExtResource( "1_tp5ev" )
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(2, -165)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(600, 270)
+scale = Vector2(3, 3)
+texture = ExtResource( "1_tp5ev" )
 
 [node name="LowerSafeFloor" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(501, 699)

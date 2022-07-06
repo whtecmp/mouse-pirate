@@ -1,0 +1,12 @@
+[gd_resource type="AnimatedTexture" load_steps=3 format=3 uid="uid://u8mqrm2smho6"]
+
+[ext_resource type="Texture2D" uid="uid://cey4e1c5qqqaf" path="res://assets/Watteranimation1.png" id="1_kffro"]
+[ext_resource type="Texture2D" uid="uid://b8o2lwn4lny7x" path="res://assets/Watteranimation2.png" id="2_37sjb"]
+
+[resource]
+frames = 2
+oneshot = true
+fps = 60.0
+frame_0/texture = ExtResource( "1_kffro" )
+frame_1/texture = ExtResource( "2_37sjb" )
+frame_1/delay_sec = 0.0

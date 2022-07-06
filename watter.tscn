@@ -1,0 +1,334 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvaw1w7v2k1ui"]
+
+[ext_resource type="Texture2D" uid="uid://buv6tefikcg7e" path="res://assets/Tiles.png" id="1_ixwca"]
+[ext_resource type="Texture2D" uid="uid://u8mqrm2smho6" path="res://watter_animated_texture.tres" id="2_qk1n8"]
+[ext_resource type="Texture2D" uid="uid://cey4e1c5qqqaf" path="res://assets/Watteranimation1.png" id="3_urat8"]
+[ext_resource type="Texture2D" uid="uid://b8o2lwn4lny7x" path="res://assets/Watteranimation2.png" id="4_4k60m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmjw7"]
+texture = ExtResource( "1_ixwca" )
+0:0/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+0:8/0 = 0
+0:9/0 = 0
+0:10/0 = 0
+0:11/0 = 0
+0:12/0 = 0
+0:13/0 = 0
+0:14/0 = 0
+0:15/0 = 0
+0:16/0 = 0
+0:17/0 = 0
+0:18/0 = 0
+0:19/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+1:6/0 = 0
+1:7/0 = 0
+1:8/0 = 0
+1:9/0 = 0
+1:10/0 = 0
+1:11/0 = 0
+1:12/0 = 0
+1:13/0 = 0
+1:14/0 = 0
+1:15/0 = 0
+1:16/0 = 0
+1:17/0 = 0
+1:18/0 = 0
+1:19/0 = 0
+1:20/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+2:1/0/texture_offset = Vector2i(100, 100)
+2:2/0 = 0
+2:3/0 = 0
+2:4/0 = 0
+2:5/0 = 0
+2:6/0 = 0
+2:7/0 = 0
+2:8/0 = 0
+2:9/0 = 0
+2:10/0 = 0
+2:11/0 = 0
+2:12/0 = 0
+2:13/0 = 0
+2:14/0 = 0
+2:15/0 = 0
+2:16/0 = 0
+2:17/0 = 0
+2:18/0 = 0
+2:19/0 = 0
+2:20/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+3:1/0/texture_offset = Vector2i(100, 100)
+3:2/0 = 0
+3:3/0 = 0
+3:4/0 = 0
+3:5/0 = 0
+3:6/0 = 0
+3:7/0 = 0
+3:8/0 = 0
+3:9/0 = 0
+3:10/0 = 0
+3:11/0 = 0
+3:12/0 = 0
+3:13/0 = 0
+3:14/0 = 0
+3:15/0 = 0
+3:16/0 = 0
+3:17/0 = 0
+3:18/0 = 0
+3:19/0 = 0
+3:20/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+4:1/0/texture_offset = Vector2i(100, 100)
+4:2/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+4:5/0 = 0
+4:6/0 = 0
+4:7/0 = 0
+4:8/0 = 0
+4:9/0 = 0
+4:10/0 = 0
+4:11/0 = 0
+4:12/0 = 0
+4:13/0 = 0
+4:16/0 = 0
+4:17/0 = 0
+4:18/0 = 0
+4:19/0 = 0
+4:20/0 = 0
+5:0/0 = 0
+5:1/0 = 0
+5:1/0/texture_offset = Vector2i(100, 100)
+5:2/0 = 0
+5:3/0 = 0
+5:4/0 = 0
+5:5/0 = 0
+5:6/0 = 0
+5:7/0 = 0
+5:8/0 = 0
+5:9/0 = 0
+5:10/0 = 0
+5:11/0 = 0
+5:12/0 = 0
+5:13/0 = 0
+5:14/0 = 0
+5:15/0 = 0
+5:16/0 = 0
+5:17/0 = 0
+5:18/0 = 0
+5:19/0 = 0
+5:20/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+6:1/0/texture_offset = Vector2i(100, 100)
+6:2/0 = 0
+6:3/0 = 0
+6:4/0 = 0
+6:5/0 = 0
+6:6/0 = 0
+6:7/0 = 0
+6:8/0 = 0
+6:9/0 = 0
+6:10/0 = 0
+6:11/0 = 0
+6:12/0 = 0
+6:13/0 = 0
+6:14/0 = 0
+6:16/0 = 0
+6:17/0 = 0
+6:18/0 = 0
+6:19/0 = 0
+6:20/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+7:6/0 = 0
+7:7/0 = 0
+7:8/0 = 0
+7:9/0 = 0
+7:10/0 = 0
+7:11/0 = 0
+7:12/0 = 0
+7:13/0 = 0
+7:14/0 = 0
+7:15/0 = 0
+7:16/0 = 0
+7:17/0 = 0
+7:18/0 = 0
+7:19/0 = 0
+7:20/0 = 0
+8:0/0 = 0
+8:1/0 = 0
+8:2/0 = 0
+8:3/0 = 0
+8:4/0 = 0
+8:5/0 = 0
+8:6/0 = 0
+8:7/0 = 0
+8:8/0 = 0
+8:9/0 = 0
+8:10/0 = 0
+8:11/0 = 0
+8:12/0 = 0
+8:13/0 = 0
+8:14/0 = 0
+8:15/0 = 0
+8:16/0 = 0
+8:17/0 = 0
+8:18/0 = 0
+8:19/0 = 0
+8:20/0 = 0
+9:0/0 = 0
+9:1/0 = 0
+9:2/0 = 0
+9:3/0 = 0
+9:4/0 = 0
+9:5/0 = 0
+9:6/0 = 0
+9:7/0 = 0
+9:8/0 = 0
+9:9/0 = 0
+9:10/0 = 0
+9:11/0 = 0
+9:12/0 = 0
+9:15/0 = 0
+9:16/0 = 0
+9:17/0 = 0
+9:18/0 = 0
+9:19/0 = 0
+9:20/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tu11c"]
+texture = ExtResource( "2_qk1n8" )
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lc1ff"]
+sources/0 = SubResource( "TileSetAtlasSource_gmjw7" )
+sources/1 = SubResource( "TileSetAtlasSource_tu11c" )
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eief2"]
+animations = [{
+"frames": [ExtResource( "3_urat8" ), ExtResource( "4_4k60m" )],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"New Anim",
+"speed": 5.0
+}]
+
+[node name="Watter" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = SubResource( "TileSet_lc1ff" )
+format = 2
+layer_0/tile_data = PackedInt32Array(524288, 65536, 9, 589824, 65536, 9, 524289, 65536, 9, 589825, 65536, 9, 524290, 65536, 9, 589826, 65536, 9, 524291, 65536, 9, 589827, 65536, 9, 524292, 65536, 9, 589828, 65536, 9, 524293, 65536, 9, 589829, 65536, 9, 524294, 65536, 9, 589830, 65536, 9, 524295, 65536, 9, 589831, 65536, 9, 524296, 65536, 9, 589832, 65536, 9, 524297, 65536, 9, 589833, 65536, 9, 524298, 65536, 9, 589834, 65536, 9, 524299, 65536, 9, 589835, 65536, 9, 524300, 65536, 9, 589836, 65536, 9, 524301, 65536, 9, 589837, 65536, 9, 524302, 65536, 9, 589838, 65536, 9, 524303, 65536, 9, 589839, 65536, 9)
+
+[node name="A1" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(8, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
+playing = true
+
+[node name="A2" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(24, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A3" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(40, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A4" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(56, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A5" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(72, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A6" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(88, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A7" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(104, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
+playing = true
+
+[node name="A8" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(120, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
+playing = true
+
+[node name="A9" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(136, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A10" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(152, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A11" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(168, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
+playing = true
+
+[node name="A12" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(184, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
+playing = true
+
+[node name="A13" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(200, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
+playing = true
+
+[node name="A14" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(216, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
+playing = true
+
+[node name="A15" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(232, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
+
+[node name="A16" type="AnimatedSprite2D" parent="TileMap"]
+position = Vector2(248, 114.75)
+frames = SubResource( "SpriteFrames_eief2" )
+playing = true
