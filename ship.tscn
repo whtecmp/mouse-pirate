@@ -1,0 +1,150 @@
+[gd_scene load_steps=17 format=3 uid="uid://ckoe4bxod8hjs"]
+
+[ext_resource type="Texture2D" uid="uid://d1iouansahxf8" path="res://assets/Ship.png" id="1_tp5ev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ju2jn"]
+size = Vector2(972, 20)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_aeytq"]
+b = Vector2(27.5, 8.25)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r8d8m"]
+a = Vector2(3.25, -0.75)
+b = Vector2(17.75, 5.75)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_481og"]
+b = Vector2(29, 6.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lhw1p"]
+a = Vector2(0, -0.75)
+b = Vector2(15.5, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_taw7m"]
+b = Vector2(30.25, -2.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vlyg0"]
+b = Vector2(15.25, -14.75)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ytn6g"]
+a = Vector2(7, -0.25)
+b = Vector2(50.75, -6)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mgre0"]
+a = Vector2(0, 0.5)
+b = Vector2(29.5, -9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7xnqg"]
+b = Vector2(27, -12)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2e8iu"]
+a = Vector2(-1.25, 1.25)
+b = Vector2(9.25, 2.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ywika"]
+b = Vector2(12.25, 7)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yptg4"]
+b = Vector2(12, 6)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yfxxu"]
+b = Vector2(11.5, 4.75)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_unx07"]
+b = Vector2(15, 1.75)
+
+[node name="Ship" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(602, 105)
+scale = Vector2(3, 3)
+texture = ExtResource( "1_tp5ev" )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2, -165)
+
+[node name="LowerSafeFloor" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(501, 699)
+scale = Vector2(100, 1)
+shape = SubResource( "RectangleShape2D_ju2jn" )
+
+[node name="CS2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(139, 389)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_aeytq" )
+
+[node name="CS3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(272, 442)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_r8d8m" )
+
+[node name="CS4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(339, 463)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_481og" )
+
+[node name="CS5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(487, 507)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_lhw1p" )
+
+[node name="CS6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(500, 519)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_taw7m" )
+
+[node name="CS7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(603, 514)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_vlyg0" )
+
+[node name="CS8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(632, 460)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_ytn6g" )
+
+[node name="CS9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(837, 440)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_mgre0" )
+
+[node name="CS10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(956, 425)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_7xnqg" )
+
+[node name="CS11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(951, 403)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_2e8iu" )
+
+[node name="CS12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(263, 425)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_ywika" )
+
+[node name="CS13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(449, 486)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_yptg4" )
+
+[node name="CS14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(222, 410)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_yfxxu" )
+
+[node name="CS15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(99, 388)
+scale = Vector2(4, 4)
+shape = SubResource( "SegmentShape2D_unx07" )
+
+[node name="CS16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(810, -38)
+scale = Vector2(4, 4)
+
+[node name="CS17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(810, -38)
+scale = Vector2(4, 4)
+
+[node name="CS18" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(810, -38)
+scale = Vector2(4, 4)

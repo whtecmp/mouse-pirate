@@ -3,7 +3,7 @@ extends Node2D
 signal player_change_hit_points(new_value)
 
 var attack_is_on = false;
-var hits = 0;
+var hits = 100;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +20,8 @@ func _process(delta):
 		for body in in_range_bodies:
 			if body.has_method("hit_by"):
 				body.hit_by("player")
+	if hits <= 0:
+		visible = false;
 	
 
 func _on_attack_is_on_timer_timeout():
@@ -32,5 +34,5 @@ func _on_player_body_attack_finished():
 
 func hit_by(who):
 	if who == "enemy_mouse":
-		hits += 1
-		emit_signal("player_change_hit_points", hits)
+		hits -= 2;
+		emit_signal("player_change_hit_points", hits);

@@ -25,6 +25,8 @@ var whoami;
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func assess_relative_position_to_objective(objective, min_distance_threshold, max_distance_threshold):
+	if not objective:
+		return TOO_FAR
 	var distance_from_object = global_position.x - objective.global_position.x
 	if min_distance_threshold < distance_from_object and distance_from_object < max_distance_threshold:
 		return LEFT;
