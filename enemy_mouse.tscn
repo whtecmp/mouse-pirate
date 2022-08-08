@@ -26,43 +26,43 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f2f0u"]
 animations = [{
-"frames": [ExtResource( "2_bwgri" )],
+"frames": [ExtResource( "7_1346d" ), ExtResource( "8_h1ha4" ), ExtResource( "9_r8ua1" ), ExtResource( "10_3k0ym" ), ExtResource( "11_yhba1" )],
 "loop": true,
-"name": &"Idle",
-"speed": 5.0
+"name": &"Attack",
+"speed": 20.0
 }, {
 "frames": [ExtResource( "2_kttgy" ), ExtResource( "3_e46bl" ), ExtResource( "4_kxmjo" ), ExtResource( "5_f4pho" )],
 "loop": true,
 "name": &"Run",
 "speed": 5.0
 }, {
-"frames": [ExtResource( "7_1346d" ), ExtResource( "8_h1ha4" ), ExtResource( "9_r8ua1" ), ExtResource( "10_3k0ym" ), ExtResource( "11_yhba1" )],
+"frames": [ExtResource( "2_bwgri" )],
 "loop": true,
-"name": &"Attack",
-"speed": 20.0
+"name": &"Idle",
+"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qi0g"]
 animations = [{
-"frames": [ExtResource( "12_7rync" )],
+"frames": [ExtResource( "17_ve0t2" ), ExtResource( "18_y8jie" ), ExtResource( "19_4xnc4" ), ExtResource( "21_6bmc2" ), ExtResource( "20_ln0dc" )],
 "loop": true,
-"name": &"Idle",
-"speed": 5.0
+"name": &"Attack",
+"speed": 20.0
 }, {
 "frames": [ExtResource( "8_0d78u" ), ExtResource( "9_qfwwi" ), ExtResource( "10_ye4nq" ), ExtResource( "11_4yosw" )],
 "loop": true,
 "name": &"Run",
 "speed": 5.0
 }, {
-"frames": [ExtResource( "17_ve0t2" ), ExtResource( "18_y8jie" ), ExtResource( "19_4xnc4" ), ExtResource( "21_6bmc2" ), ExtResource( "20_ln0dc" )],
+"frames": [ExtResource( "12_7rync" )],
 "loop": true,
-"name": &"Attack",
-"speed": 20.0
+"name": &"Idle",
+"speed": 5.0
 }]
 
 [node name="EnemyMouse" type="Node2D"]
 position = Vector2(-5, -9)
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 script = ExtResource( "1_fumyh" )
 __meta__ = {
 "_edit_group_": true

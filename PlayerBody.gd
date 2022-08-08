@@ -5,10 +5,10 @@ signal look_down
 signal look_reg
 signal attack_finished
 
-const SPEED = 350.0
+const SPEED = 450.0
 const INITIAL_JUMP_VELOCITY = -200.0
-const MAX_JUMP_VELOCITY = -300.0
-const JUMP_VELOCITY_INTERVAL = -33;
+const MAX_JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY_INTERVAL = -66;
 
 var can_idle = true;
 var return_attack = false;

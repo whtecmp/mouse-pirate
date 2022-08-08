@@ -39,7 +39,7 @@ func update_camera(delta):
 	var player_offset = last_player_pos - $Player/PlayerBody.position
 	player_offset.x *= follow_player.x
 	player_offset.y *= follow_player.y
-	player_offset *= 2;
+	player_offset *= 4; # 4 is the scale of the player
 	canvas_transform[2] += player_offset
 	if look and not looked:
 		canvas_transform[2] += look_vec * LOOK_DISTANCE;

@@ -55,7 +55,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	var relative_position_to_objective = assess_relative_position_to_objective(get_tree().get_root().get_node("Main/Player/PlayerBody"), 60, 500);
+	var relative_position_to_objective = assess_relative_position_to_objective(get_tree().get_root().get_node("Main/Player/PlayerBody"), 120, 1000);
 	{ # switch case relative_position_to_objective
 		LEFT: func (_self):
 			_self.walk = true;
