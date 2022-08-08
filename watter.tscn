@@ -249,86 +249,88 @@ layer_0/tile_data = PackedInt32Array(524288, 65536, 9, 589824, 65536, 9, 524289,
 [node name="A1" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(8, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
-frame = 1
 playing = true
 
 [node name="A2" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(24, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A3" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(40, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A4" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(56, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A5" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(72, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A6" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(88, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A7" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(104, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
-frame = 1
 playing = true
 
 [node name="A8" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(120, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
-frame = 1
 playing = true
 
 [node name="A9" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(136, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A10" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(152, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A11" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(168, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
-frame = 1
 playing = true
 
 [node name="A12" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(184, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
-frame = 1
 playing = true
 
 [node name="A13" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(200, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
-frame = 1
 playing = true
 
 [node name="A14" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(216, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
-frame = 1
 playing = true
 
 [node name="A15" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(232, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
 
 [node name="A16" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(248, 114.75)
 frames = SubResource( "SpriteFrames_eief2" )
+frame = 1
 playing = true
