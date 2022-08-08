@@ -312,9 +312,10 @@ position = Vector2(0, -2)
 script = ExtResource( "5_ff42n" )
 
 [node name="HUD" parent="FollowView" instance=ExtResource( "5_77i0p" )]
-position = Vector2(0, -16)
+position = Vector2(1, -10)
 
 [node name="CameraControllers" type="Node2D" parent="."]
+visible = false
 
 [node name="CameraController" parent="CameraControllers" instance=ExtResource( "5_pglo5" )]
 position = Vector2(1035, 1200)
