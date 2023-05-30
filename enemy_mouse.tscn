@@ -44,7 +44,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Attack",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -92,7 +92,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
-"speed": 20.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -136,9 +136,7 @@ animation = &"Attack"
 [node name="MouseWeaponHand" type="AnimatedSprite2D" parent="Mob"]
 position = Vector2(14, 15)
 sprite_frames = SubResource("SpriteFrames_1qi0g")
-animation = &"Run"
-frame = 2
-frame_progress = 0.870389
+animation = &"Attack"
 
 [node name="Detectors" type="Node2D" parent="."]
 

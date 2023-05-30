@@ -7,23 +7,20 @@ size = Vector2(22.5716, 30.3424)
 
 [node name="Mob" type="CharacterBody2D"]
 position = Vector2(-4, -2)
-script = ExtResource( "1_ca3mp" )
-__meta__ = {
-"_edit_group_": true
-}
+script = ExtResource("1_ca3mp")
 
 [node name="MobArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MobArea"]
 position = Vector2(15.8642, 16.2117)
-shape = SubResource( "RectangleShape2D_o4ino" )
+shape = SubResource("RectangleShape2D_o4ino")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(15.8642, 16.2117)
-shape = SubResource( "RectangleShape2D_o4ino" )
+shape = SubResource("RectangleShape2D_o4ino")
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 1.2
 one_shot = true
 
 [node name="AttackIsOnTimer" type="Timer" parent="."]

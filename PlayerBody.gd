@@ -94,7 +94,7 @@ func _on_animated_sprite_animation_finished():
 			is_attacking = false;
 		else:
 			$AnimatedSprite.stop()
-			$AnimatedSprite.play("Attack", true)
+			$AnimatedSprite.play("Attack", -1.0, true)
 			return_attack = true;
 			emit_signal("attack_finished")
 

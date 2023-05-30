@@ -11,6 +11,7 @@ func _ready():
 		_self.get_node("Mob/MouseBody").stop();
 		_self.get_node("Mob/MouseWeaponHand").stop();
 	$Mob.play_animation = func(anim, custom_speed = 1.0, backwards = false):
+		custom_speed = custom_speed * (-1 if backwards else 1);
 		_self.get_node("Mob/MouseBody").play(anim, custom_speed, backwards);
 		_self.get_node("Mob/MouseWeaponHand").play(anim, custom_speed, backwards);
 	$Mob.flip = flip;
