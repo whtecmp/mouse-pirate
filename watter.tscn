@@ -227,11 +227,6 @@ sources/1 = SubResource("TileSetAtlasSource_tu11c")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eief2"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"New Anim",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_urat8")
@@ -255,47 +250,58 @@ layer_0/tile_data = PackedInt32Array(524288, 65536, 9, 589824, 65536, 9, 524289,
 [node name="A1" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(8, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
-frame_progress = 0.0657357
+autoplay = "default"
+frame = 1
+frame_progress = 0.384164
 
 [node name="A2" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(24, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame_progress = 0.0247269
 
 [node name="A3" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(40, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A4" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(56, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame_progress = 0.0533675
 
 [node name="A5" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(72, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A6" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(88, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A7" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(104, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A8" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(120, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A9" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(136, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A10" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(152, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A11" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(168, 114.75)
@@ -305,82 +311,102 @@ frame = 1
 [node name="A12" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(184, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A13" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(200, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A14" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(216, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A15" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(232, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
+frame_progress = 0.759334
 
 [node name="A16" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(248, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A17" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(264, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A18" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(280, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A19" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(296, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A20" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(312, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A21" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(328, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A22" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(344, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A23" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(360, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A24" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(376, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A25" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(392, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A26" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(408, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A27" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(424, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 
 [node name="A28" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(440, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A29" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(456, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"
 frame = 1
 
 [node name="A30" type="AnimatedSprite2D" parent="TileMap"]
 position = Vector2(472, 114.75)
 sprite_frames = SubResource("SpriteFrames_eief2")
+autoplay = "default"

@@ -47,7 +47,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 4.0,
+"duration": 1.0,
 "texture": ExtResource("2_bwgri")
 }],
 "loop": false,

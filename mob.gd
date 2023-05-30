@@ -121,7 +121,7 @@ func attack_finished():
 		is_attacking = false;
 	else:
 		stop_animation.call()
-		play_animation.call("Attack", true)
+		play_animation.call("Attack", 1, true)
 		return_attack = true;
 		$AttackIsOnTimer.start();
 		attack_is_on = true;
