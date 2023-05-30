@@ -17,19 +17,52 @@
 
 [sub_resource type="SpriteFrames" id="2"]
 animations = [{
-"frames": [ExtResource( "2_ce6mo" ), ExtResource( "3_a0qg6" ), ExtResource( "4_i2g18" ), ExtResource( "5_i1yor" ), ExtResource( "6_kll6q" )],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ce6mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a0qg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i2g18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i1yor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kll6q")
+}],
 "loop": false,
 "name": &"Attack",
 "speed": 20.0
 }, {
-"frames": [ExtResource( "6" ), ExtResource( "3" ), ExtResource( "2" ), ExtResource( "5" ), ExtResource( "7_vywq6" )],
-"loop": true,
-"name": &"Run",
-"speed": 5.0
-}, {
-"frames": [ExtResource( "1" )],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vywq6")
+}],
+"loop": true,
+"name": &"Run",
 "speed": 5.0
 }]
 
@@ -39,35 +72,32 @@ size = Vector2(22.5716, 30.3424)
 [node name="Player" type="Node2D"]
 position = Vector2(30, 61)
 scale = Vector2(4, 4)
-script = ExtResource( "1_oaou4" )
-__meta__ = {
-"_edit_group_": true
-}
+script = ExtResource("1_oaou4")
 
 [node name="PlayerBody" type="CharacterBody2D" parent="."]
-script = ExtResource( "1_22jme" )
+script = ExtResource("1_22jme")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="PlayerBody"]
-position = Vector2(14.6034, 18.4736)
-frames = SubResource( "2" )
+position = Vector2(14, 15)
+sprite_frames = SubResource("2")
 animation = &"Attack"
 
 [node name="PlayerArea" type="Area2D" parent="PlayerBody"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody/PlayerArea"]
 position = Vector2(15.8642, 16.2117)
-shape = SubResource( "1" )
+shape = SubResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody"]
 position = Vector2(15.8642, 16.2117)
-shape = SubResource( "1" )
+shape = SubResource("1")
 
 [node name="Detectors" type="Node2D" parent="."]
 
-[node name="AttackDetectorRight" parent="Detectors" instance=ExtResource( "13_xnd12" )]
+[node name="AttackDetectorRight" parent="Detectors" instance=ExtResource("13_xnd12")]
 position = Vector2(-5.5, -1)
 
-[node name="AttackDetectorLeft" parent="Detectors" instance=ExtResource( "13_xnd12" )]
+[node name="AttackDetectorLeft" parent="Detectors" instance=ExtResource("13_xnd12")]
 position = Vector2(-25, -1)
 
 [node name="AttackIsOnTimer" type="Timer" parent="."]

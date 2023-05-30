@@ -42,15 +42,15 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("11_yhba1")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack",
-"speed": 20.0
+"speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 4.0,
 "texture": ExtResource("2_bwgri")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle",
 "speed": 5.0
 }, {
@@ -67,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_f4pho")
 }],
-"loop": true,
+"loop": false,
 "name": &"Run",
 "speed": 5.0
 }]
@@ -131,12 +131,14 @@ position = Vector2(3, 7)
 [node name="MouseBody" type="AnimatedSprite2D" parent="Mob"]
 position = Vector2(14, 15)
 sprite_frames = SubResource("SpriteFrames_f2f0u")
-animation = &"Idle"
+animation = &"Attack"
 
 [node name="MouseWeaponHand" type="AnimatedSprite2D" parent="Mob"]
 position = Vector2(14, 15)
 sprite_frames = SubResource("SpriteFrames_1qi0g")
-animation = &"Idle"
+animation = &"Run"
+frame = 2
+frame_progress = 0.870389
 
 [node name="Detectors" type="Node2D" parent="."]
 
