@@ -11,13 +11,14 @@ func _ready():
 		_self.get_node("Mob/MouseBody").stop();
 		_self.get_node("Mob/MouseWeaponHand").stop();
 	$Mob.play_animation = func(anim, backwards = false):
+		print ("WORKS")
 		_self.get_node("Mob/MouseBody").play(anim, backwards);
 		_self.get_node("Mob/MouseWeaponHand").play(anim, backwards);
 	$Mob.flip = flip;
 	$Mob.whoami = "enemy_mouse"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func hit_by(who):

@@ -24,10 +24,10 @@ func _ready():
 	$Player/PlayerBody.look_down.connect(_on_player_look_down);
 	$Player/PlayerBody.look_reg.connect(_on_player_look_reg);
 	$Player/PlayerBody.look_up.connect(_on_player_look_up);
-	background_1.material.set_shader_param("scroll_speed_x", scroll_speed_1.x);
-	background_1.material.set_shader_param("scroll_speed_y", scroll_speed_1.y);
-	background_2.material.set_shader_param("scroll_speed_x", scroll_speed_2.x);
-	background_2.material.set_shader_param("scroll_speed_y", scroll_speed_2.y);
+	background_1.material.set_shader_parameter("scroll_speed_x", scroll_speed_1.x);
+	background_1.material.set_shader_parameter("scroll_speed_y", scroll_speed_1.y);
+	background_2.material.set_shader_parameter("scroll_speed_x", scroll_speed_2.x);
+	background_2.material.set_shader_parameter("scroll_speed_y", scroll_speed_2.y);
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -61,10 +61,10 @@ func update_camera(delta):
 		background_distance.y += delta;
 	elif player_offset.y > 0:
 		background_distance.y -= delta;
-	background_1.material.set_shader_param("background_distance_x", background_distance.x)
-	background_1.material.set_shader_param("background_distance_y", background_distance.y)
-	background_2.material.set_shader_param("background_distance_x", background_distance.x)
-	background_2.material.set_shader_param("background_distance_y", background_distance.y)
+	background_1.material.set_shader_parameter("background_distance_x", background_distance.x)
+	background_1.material.set_shader_parameter("background_distance_y", background_distance.y)
+	background_2.material.set_shader_parameter("background_distance_x", background_distance.x)
+	background_2.material.set_shader_parameter("background_distance_y", background_distance.y)
 
 func _on_camera_controller_player_entered_x():
 	follow_player += Vector2(1, 0);

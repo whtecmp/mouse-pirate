@@ -26,69 +26,125 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f2f0u"]
 animations = [{
-"frames": [ExtResource( "7_1346d" ), ExtResource( "8_h1ha4" ), ExtResource( "9_r8ua1" ), ExtResource( "10_3k0ym" ), ExtResource( "11_yhba1" )],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1346d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h1ha4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_r8ua1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3k0ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yhba1")
+}],
 "loop": true,
 "name": &"Attack",
 "speed": 20.0
 }, {
-"frames": [ExtResource( "2_kttgy" ), ExtResource( "3_e46bl" ), ExtResource( "4_kxmjo" ), ExtResource( "5_f4pho" )],
-"loop": true,
-"name": &"Run",
-"speed": 5.0
-}, {
-"frames": [ExtResource( "2_bwgri" )],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bwgri")
+}],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kttgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e46bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kxmjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f4pho")
+}],
+"loop": true,
+"name": &"Run",
 "speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qi0g"]
 animations = [{
-"frames": [ExtResource( "17_ve0t2" ), ExtResource( "18_y8jie" ), ExtResource( "19_4xnc4" ), ExtResource( "21_6bmc2" ), ExtResource( "20_ln0dc" )],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_ve0t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_y8jie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4xnc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6bmc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ln0dc")
+}],
 "loop": true,
 "name": &"Attack",
 "speed": 20.0
 }, {
-"frames": [ExtResource( "8_0d78u" ), ExtResource( "9_qfwwi" ), ExtResource( "10_ye4nq" ), ExtResource( "11_4yosw" )],
-"loop": true,
-"name": &"Run",
-"speed": 5.0
-}, {
-"frames": [ExtResource( "12_7rync" )],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_7rync")
+}],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0d78u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qfwwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ye4nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4yosw")
+}],
+"loop": true,
+"name": &"Run",
 "speed": 5.0
 }]
 
 [node name="EnemyMouse" type="Node2D"]
 position = Vector2(-5, -9)
 scale = Vector2(4, 4)
-script = ExtResource( "1_fumyh" )
-__meta__ = {
-"_edit_group_": true
-}
+script = ExtResource("1_fumyh")
 
-[node name="Mob" parent="." instance=ExtResource( "1_53g6t" )]
+[node name="Mob" parent="." instance=ExtResource("1_53g6t")]
 position = Vector2(3, 7)
 
 [node name="MouseBody" type="AnimatedSprite2D" parent="Mob"]
 position = Vector2(14, 15)
-frames = SubResource( "SpriteFrames_f2f0u" )
-animation = &"Attack"
+sprite_frames = SubResource("SpriteFrames_f2f0u")
+animation = &"Idle"
 
 [node name="MouseWeaponHand" type="AnimatedSprite2D" parent="Mob"]
 position = Vector2(14, 15)
-frames = SubResource( "SpriteFrames_1qi0g" )
-animation = &"Attack"
-frame = 4
+sprite_frames = SubResource("SpriteFrames_1qi0g")
+animation = &"Idle"
 
 [node name="Detectors" type="Node2D" parent="."]
 
-[node name="AttackDetectorRight" parent="Detectors" instance=ExtResource( "23_4tico" )]
+[node name="AttackDetectorRight" parent="Detectors" instance=ExtResource("23_4tico")]
 position = Vector2(-1, 8.5)
 scale = Vector2(1.13, 1)
 
-[node name="AttackDetectorLeft" parent="Detectors" instance=ExtResource( "23_4tico" )]
+[node name="AttackDetectorLeft" parent="Detectors" instance=ExtResource("23_4tico")]
 position = Vector2(-37, 8.5)
 scale = Vector2(1.2769, 1)
 
